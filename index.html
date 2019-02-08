@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+<div id="MyAppRoot"></div>
+
+<script src="vue.js"></script>
+<script>
+var componentRoot = new Vue( {
+
+  template: '<div><div>hello!</div><span>Vue.js!</span></div>',
+} );
+
+// 要素にマウントする
+componentRoot.$mount( '#MyAppRoot' );
+</script>
+
+
+</body>
+</html>

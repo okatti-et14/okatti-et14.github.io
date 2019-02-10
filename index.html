@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 
+
+=======
 <head>
-<meta charset="utf-8">
-<title></title>
+  <meta charset="utf-8">
+  <title>quena</title>
 </head>
-
 <body>
-
-<div id="app">
-  <p>Length: {{ length }}</p>
-  <ul>
-    <li v-for="(item, i) in list" :key="item">{{ item }}
-      <button @click="list.splice(i, 1)">remove</button>
-    </li>
-  </ul>
-  <button @click="addItem">add</button>
+  <div id="app">
+  {{ message }}
+  <button v-on:click="japanese">日本語表示</button>
 </div>
-
-<script src="vue.js"></script>
+<div id="app1">
+  <input v-model="message" type="text" placeholder="Name">
+  <p> {{ message }} </p>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script>
 new Vue({
-  el: '#app',
-  data: {
-    counter: 0,
-    list: ['Apple', 'Banana', 'Strawberry']
-  },
-  computed: {
-    length: function() {
-      return this.list.length
-    }
-  },
-  methods: {
-    addItem: function() {
-      this.list.push('Orange' + (++this.counter).toString())
+el: '#app',
+data: {
+  message: 'Hello Vue.js!'
+},
+methods: {
+    japanese: function () {
+      this.message = 'ちんこ！'
     }
   }
 })
-
-</script>
+new Vue({
+  el: '#app1',
+  data: {
+    message: ''
+  }
+})
+  </script>
+  <style>
+  ody {
+  padding: 20px;
+  font: 16px/1.4 sans-serif;
+}
+.panel {
+  background: #fee;
+  border: 2px solid #fbb;
+  padding: 20px;
+  text-align: center;
+}
+button {
+  font-size: 1rem;
+  background: #af2;
+  color: #f66;
+  border: #f66;
+  cursor: pointer;
+  outline: #f66;
+}
+button span {
+  font-size: 2.25rem;
+  position: relative;
+  top: 5px;
+}
+button:hover {
+  color: #d44;
+}
+  </style>
 </body>
 </html>
+>>>>>>> sample2
